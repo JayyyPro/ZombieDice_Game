@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.main.ScoreboardController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@image/postApocalyptique.jpg" />
+         </image>
+         <effect>
+            <GaussianBlur radius="5.0" />
+         </effect>
+      </ImageView>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <top>
+            <Label text="FIN DE LA PARTIE" textFill="WHITE" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets bottom="30.0" top="30.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+         </top>
+         <center>
+            <HBox alignment="CENTER" prefHeight="312.0" prefWidth="602.0" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tableScoreboard" prefHeight="312.0" prefWidth="452.0">
+                    <columns>
+                      <TableColumn fx:id="numJoueursScoreboard" prefWidth="133.60004270076752" text="Numero du joueur" />
+                      <TableColumn fx:id="nbCerveauxScoreboard" prefWidth="122.39999389648438" text="Nb de cerveaux" />
+                    </columns>
+                  </TableView>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="273.0" fitWidth="249.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/zombie-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                        <Button mnemonicParsing="false" onAction="#retourAuMenu" text="RETOUR AU MENU" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" right="20.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
